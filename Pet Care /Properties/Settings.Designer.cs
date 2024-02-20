@@ -23,3 +23,8 @@ namespace PetFriends.Properties
             get
             {
                 return defaultInstance;
+                }
+        }
+    }
+}
+}
