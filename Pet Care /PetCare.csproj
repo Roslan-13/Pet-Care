@@ -7,3 +7,5 @@
 <ProjectGuid>{FC7C83D2-F531-4823-BCE8-EB14807356B3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PetCare</RootNamespace>
+ <AssemblyName>PetCare</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
