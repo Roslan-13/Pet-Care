@@ -19,10 +19,9 @@
 - **Community Engagement:** Share experiences, seek advice, and organize local events.
 
 ### 🚀 Unique Features
-- Holistic approach to pet care.
-- Integration with Azure Cosmos DB and Azure Functions.
+- A holistic approach to pet care.
 - User-friendly interface with intuitive navigation.
-- Regular updates based on latest research and user feedback.
+- Regular updates based on the latest research and user feedback.
 
 ### 💲 Pricing
 **Free** with optional in-app purchases for premium features.
