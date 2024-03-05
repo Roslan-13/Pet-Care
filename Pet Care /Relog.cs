@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-namespace PetFriends
+namespace PetCare
 {
     public partial class RegLog : Form
     {
