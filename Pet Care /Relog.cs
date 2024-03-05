@@ -25,3 +25,19 @@ namespace PetFriends
         {
             Application.Exit();
         }
+ }
+
+        private void RegLog_Load(object sender, EventArgs e)
+        {
+            VisibleComponents();
+        }
+        private void VisibleComponents()
+        {
+            //Register/login form
+            regPanel.Visible = false;
+            uaeMess.Visible = false;
+            pdneMess.Visible = false;
+            siP.Visible = false;
+            suP.Location = new Point(578, 553);
+            suP.Visible = true;
+        }
