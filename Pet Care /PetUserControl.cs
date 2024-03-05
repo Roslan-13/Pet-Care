@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetFriends
+namespace PetCare
 {
     public partial class PetUserControl : UserControl
     {
