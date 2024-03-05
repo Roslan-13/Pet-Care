@@ -17,3 +17,11 @@ namespace PetFriends
         {
             InitializeComponent();
         }
+ //Database connection
+        static string cone = ConfigurationManager.ConnectionStrings["PFC"].ConnectionString;
+        SqlConnection Con = new SqlConnection(cone);
+        //RegLog close button
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
