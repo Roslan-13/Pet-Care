@@ -36,3 +36,25 @@ VisibleComponents();
         //Visible components
         private void VisibleComponents()
         {
+ closImg1.Visible = false;
+            closImg2.Visible = false;
+            closImg3.Visible = false;
+            closImg4.Visible = false;
+            webBrowser1.Visible = false;
+            searchLoc.Visible = false;
+            searchLocBtn.Visible = false;
+            mapType.Visible = false;
+            searchLoc.Location = new Point(519, 17);
+            searchLocBtn.Location = new Point(863, 17);
+            webBrowser1.Location = new Point(263, 99);
+            mapType.Location = new Point(519, 58);
+            GenerateDynamicPostControl();
+            flowLayoutPanel1.Location = new Point(264, 174);
+            flowLayoutPanel2.Location = new Point(307, 66);
+            flowLayoutPanel2.Visible = false;
+            panel2.Location = new Point(542, 19);
+            panel3.Location = new Point(398, 6);
+            panel4.Location = new Point(357, 33);
+            panel4.Visible = false;
+            panel3.Visible = false;
+        }
