@@ -78,3 +78,10 @@ VisibleComponents();
                         profilePic.Image = null;
                         Con.Close();
                     }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        profilePic.Image = Image.FromStream(ms);
+                        Con.Close();
+                    }
+                }
