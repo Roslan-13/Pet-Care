@@ -12,3 +12,11 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Drawing.Drawing2D;
 using System.Reflection;
+namespace PetCare
+{
+    public partial class UserDash : Form
+    {
+        public UserDash()
+        {
+            InitializeComponent();
+        }
