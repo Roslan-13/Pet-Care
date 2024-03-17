@@ -68,3 +68,12 @@ VisibleComponents();
                 SqlCommand cmds = new SqlCommand(querys, Con);
                 SqlDataReader reader = cmds.ExecuteReader();
                 reader.Read();
+                if (reader.HasRows)
+                {
+                    FullN.Text = reader[0].ToString();
+                    byte[] img = (byte[])(reader[1]);
+                    if (img == null)
+                    {
+                        profilePic.Image = null;
+                        Con.Close();
+                    }
