@@ -58,3 +58,13 @@ VisibleComponents();
             panel4.Visible = false;
             panel3.Visible = false;
         }
+         //User data load
+        private void getUserData()
+        {
+            try
+            {
+                string querys = "select Full_Name,Profile_Img from UserTbl where Full_Email = '" + RegLog.accem + "'";
+                Con.Open();
+                SqlCommand cmds = new SqlCommand(querys, Con);
+                SqlDataReader reader = cmds.ExecuteReader();
+                reader.Read();
