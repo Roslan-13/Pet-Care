@@ -20,3 +20,12 @@ namespace PetCare
         {
             InitializeComponent();
         }
+ //Database connection
+        static string conse = ConfigurationManager.ConnectionStrings["PFC"].ConnectionString;
+        SqlConnection Con = new SqlConnection(conse);
+        //String image location
+        string imgLoc = "";
+        //Load user info
+        public static string emailacc;
+        private void UserDash_Load(object sender, EventArgs e)
+        {
