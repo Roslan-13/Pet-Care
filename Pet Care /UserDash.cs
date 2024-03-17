@@ -29,3 +29,10 @@ namespace PetCare
         public static string emailacc;
         private void UserDash_Load(object sender, EventArgs e)
         {
+VisibleComponents();
+            getUserData();
+            emailacc = RegLog.accem;
+        }
+        //Visible components
+        private void VisibleComponents()
+        {
