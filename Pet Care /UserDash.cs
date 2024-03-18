@@ -117,3 +117,16 @@ VisibleComponents();
                     int n = cmd.ExecuteNonQuery();
                     Con.Close();
                 }
+                 catch
+                {
+
+                }
+            }
+        }
+        //Logout button
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegLog rlog = new RegLog();
+            rlog.Show();
+        }
