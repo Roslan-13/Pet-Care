@@ -96,3 +96,12 @@ VisibleComponents();
             }
 
         }
+         //Add profile picture button
+        private void addProfilePicBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendlg = new OpenFileDialog();
+            if (opendlg.ShowDialog() == DialogResult.OK)
+            {
+                imgLoc = opendlg.FileName.ToString();
+                profilePic.ImageLocation = imgLoc;
+                try
