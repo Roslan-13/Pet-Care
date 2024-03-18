@@ -105,3 +105,15 @@ VisibleComponents();
                 imgLoc = opendlg.FileName.ToString();
                 profilePic.ImageLocation = imgLoc;
                 try
+ {
+                    byte[] images = null;
+                    FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    images = br.ReadBytes((int)fs.Length);
+                    Con.Open();
+                    string query = "update UserTbl set Profile_Img = @images where Full_Email = '" + RegLog.accem + "';";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.Parameters.Add(new SqlParameter("@images", images));
+                    int n = cmd.ExecuteNonQuery();
+                    Con.Close();
+                }
