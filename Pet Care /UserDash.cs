@@ -130,3 +130,15 @@ VisibleComponents();
             RegLog rlog = new RegLog();
             rlog.Show();
         }
+ //Open image 1
+        private void brImg1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendlg = new OpenFileDialog();
+            if (opendlg.ShowDialog() == DialogResult.OK)
+            {
+                imgLoc = opendlg.FileName.ToString();
+                Img1.ImageLocation = imgLoc;
+                panImg1.Visible = false;
+                closImg1.Visible = true;
+            }
+        }
