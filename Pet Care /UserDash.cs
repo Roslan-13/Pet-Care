@@ -85,3 +85,14 @@ VisibleComponents();
                         Con.Close();
                     }
                 }
+            else
+                {
+                    Con.Close();
+                }
+            }
+            catch
+            {
+                Con.Close();
+            }
+
+        }
