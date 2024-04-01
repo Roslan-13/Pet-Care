@@ -206,3 +206,17 @@ VisibleComponents();
             panImg4.Visible = true;
             closImg4.Visible = false;
         }
+ //Posted button
+        private void postBtn_Click(object sender, EventArgs e)
+        {
+            if(PetCatBox.SelectedIndex == -1 || PetTypeBox.SelectedIndex == -1 || PetLocation.Text == "" || PostedBox.Text == "" || DescBox.Text == "" || Img1.Image == null || Img2.Image == null
+                || Img3.Image == null || Img4.Image == null)
+            {
+                MessageBox.Show("Enter the requested information!");
+            }
+            else
+            {
+                Con.Open();
+                string query = "Insert into PostedTbl(Name_Post,Email_Post,Pet_Category,Pet_Type,Pet_Location,Post_Contact,Pet_Desc,Pet_Img1,Pet_Img2,Pet_Img3,Pet_Img4)values(@Name_Post,@Email_Post,@Pet_Category,@Pet_Type,@Pet_Location,@Post_Contact,@Pet_Desc,@Pet_Img1,@Pet_Img2,@Pet_Img3,@Pet_Img4)";
+                try
+                {
