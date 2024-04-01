@@ -348,3 +348,22 @@ VisibleComponents();
                 throw;
             }
         }
+         //Reading gallery from the database
+        public DataTable ReadGalleryTable()
+        {
+            string query = "SELECT * FROM PostedTbl where Email_Post = '" + RegLog.accem + "'";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
