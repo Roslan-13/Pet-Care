@@ -220,3 +220,24 @@ VisibleComponents();
                 string query = "Insert into PostedTbl(Name_Post,Email_Post,Pet_Category,Pet_Type,Pet_Location,Post_Contact,Pet_Desc,Pet_Img1,Pet_Img2,Pet_Img3,Pet_Img4)values(@Name_Post,@Email_Post,@Pet_Category,@Pet_Type,@Pet_Location,@Post_Contact,@Pet_Desc,@Pet_Img1,@Pet_Img2,@Pet_Img3,@Pet_Img4)";
                 try
                 {
+     using (SqlCommand cmd = new SqlCommand(query, Con))
+                    {
+                        Image img1 = Img1.Image, img2 = Img2.Image, img3 = Img3.Image, img4 = Img4.Image;
+                        byte[] arr1,arr2,arr3,arr4;
+                        ImageConverter converter1 = new ImageConverter();
+                        arr1 = (byte[])converter1.ConvertTo(img1, typeof(byte[]));
+                        arr2 = (byte[])converter1.ConvertTo(img2, typeof(byte[]));
+                        arr3 = (byte[])converter1.ConvertTo(img3, typeof(byte[]));
+                        arr4 = (byte[])converter1.ConvertTo(img4, typeof(byte[]));
+                        cmd.Parameters.AddWithValue("@Name_Post", FullN.Text);
+                        cmd.Parameters.AddWithValue("@Email_Post", emailacc);
+                        cmd.Parameters.AddWithValue("@Pet_Category", PetCatBox.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@Pet_Type", PetTypeBox.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@Pet_Location", PetLocation.Text);
+                        cmd.Parameters.AddWithValue("@Post_Contact", PostedBox.Text);
+                        cmd.Parameters.AddWithValue("@Pet_Desc", DescBox.Text);
+                        cmd.Parameters.AddWithValue("@Pet_Img1", arr1.ToArray());
+                        cmd.Parameters.AddWithValue("@Pet_Img2", arr2.ToArray());
+                        cmd.Parameters.AddWithValue("@Pet_Img3", arr3.ToArray());
+                        cmd.Parameters.AddWithValue("@Pet_Img4", arr4.ToArray());
+                        cmd.ExecuteNonQuery();
