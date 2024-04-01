@@ -489,3 +489,29 @@ listPost[i] = new PetUserControl();
                 wdg2.Visible = wdg2.PetCategory.ToLower().ToLower().Contains(CatLabel.Text.Trim().ToLower());
             }
         }
+//Close button details animal
+        private void closeDetBtn_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+            panel2.Visible = true;
+            flowLayoutPanel1.Visible = true;
+            mapType.SelectedIndex = -1;
+
+        }
+        //Search location google maps
+        private void searchLocBtn_Click(object sender, EventArgs e)
+        {
+            if (searchLoc.Text == "" || mapType.SelectedIndex == -1)
+            {
+                MessageBox.Show("Enter the requested information!");
+            }
+            else
+            {
+                string[] types = new string[] { "m", "k", "h", "p", "e" };
+                string url = string.Format("http://maps.google.com/maps?t={0}&q=loc:{1}",
+                types[mapType.SelectedIndex], searchLoc.Text);
+                webBrowser1.Navigate(url);
+            }
+        }
+    }
+}
