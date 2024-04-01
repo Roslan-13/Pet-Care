@@ -178,3 +178,19 @@ VisibleComponents();
                 closImg4.Visible = true;
                 }
         }
+//Close image 1
+        private void closImg1_Click(object sender, EventArgs e)
+        {
+            Img1.Image = null;
+            panImg1.Visible = true;
+            closImg1.Visible = false;
+        }
+        //Close image 2
+        private void closImg2_Click(object sender, EventArgs e)
+        {
+            Img2.Image = null;
+            panImg2.Visible = true;
+            closImg2.Visible = false;
+        }
+        //Close image 3
+        private void closImg3_Click(object sender, EventArgs e)
