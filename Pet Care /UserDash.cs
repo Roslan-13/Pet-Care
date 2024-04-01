@@ -471,3 +471,21 @@ listPost[i] = new PetUserControl();
                 wdg1.Visible = wdg1.PetCategory.ToLower().ToLower().Contains(DogsLabel.Text.Trim().ToLower());
             }
         }
+ //Search other type
+        private void SearchOther_Click(object sender, EventArgs e)
+        {
+            foreach (var item3 in flowLayoutPanel1.Controls)
+            {
+                var wdg3 = (PetUserControl)item3;
+                wdg3.Visible = wdg3.PetCategory.ToLower().ToLower().Contains(OtherLabel.Text.Trim().ToLower());
+            }
+        }
+        //Search cat type
+        private void CatsSearchBox_Click(object sender, EventArgs e)
+        {
+            foreach (var item2 in flowLayoutPanel1.Controls)
+            {
+                var wdg2 = (PetUserControl)item2;
+                wdg2.Visible = wdg2.PetCategory.ToLower().ToLower().Contains(CatLabel.Text.Trim().ToLower());
+            }
+        }
