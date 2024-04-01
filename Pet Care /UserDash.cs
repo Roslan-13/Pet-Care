@@ -410,3 +410,25 @@ VisibleComponents();
                     {
                         foreach (DataRow row in dt.Rows)
                         {
+listPost[i] = new PetUserControl();
+                            MemoryStream ms1 = new MemoryStream((byte[])row["Pet_Img1"]);
+                            listPost[i].Icon1 = new Bitmap(ms1);
+                            MemoryStream ms2 = new MemoryStream((byte[])row["Pet_Img2"]);
+                            listPost[i].Icon2 = new Bitmap(ms2);
+                            MemoryStream ms3 = new MemoryStream((byte[])row["Pet_Img3"]);
+                            listPost[i].Icon3 = new Bitmap(ms3);
+                            MemoryStream ms4 = new MemoryStream((byte[])row["Pet_Img4"]);
+                            listPost[i].Icon4 = new Bitmap(ms4);
+                            listPost[i].PetCategory = row["Pet_Category"].ToString();
+                            listPost[i].PetType = "Category: " + row["Pet_Type"].ToString();
+                            listPost[i].PetDescription = "Description: " + row["Pet_Desc"].ToString();
+                            listPost[i].PetLocation = "Location: " + row["Pet_Location"].ToString();
+                            listPost[i].PetPosted = "Posted by: " + row["Name_Post"].ToString();
+                            listPost[i].PetContact = "Contact: " + row["Post_Contact"].ToString();
+                            flowLayoutPanel1.Controls.Add(listPost[i]);
+                            listPost[i].OnSelect += new EventHandler(this.DetailsControl_Click);
+                        }
+                    }
+                }
+            }
+        }
