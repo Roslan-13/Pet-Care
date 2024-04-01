@@ -273,3 +273,17 @@ VisibleComponents();
             panImg4.Visible = true;
             closImg4.Visible = false;
         }
+         //Add pet button
+        private void addPetBtn_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            flowLayoutPanel2.Visible = false;
+            panel4.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = true;
+            webBrowser1.Visible = false;
+            searchLoc.Visible = false;
+            searchLocBtn.Visible = false;
+            mapType.SelectedIndex = -1;
+            mapType.Visible = false;
+        }
