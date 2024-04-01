@@ -329,3 +329,22 @@ VisibleComponents();
             searchLocBtn.Visible = true;
             mapType.Visible = true;
         }
+//Reading posts from the database
+        public DataTable ReadPostTable()
+        {
+            string query = "SELECT * FROM PostedTbl";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
