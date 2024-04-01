@@ -194,3 +194,15 @@ VisibleComponents();
         }
         //Close image 3
         private void closImg3_Click(object sender, EventArgs e)
+        {
+            Img3.Image = null;
+            panImg3.Visible = true;
+            closImg3.Visible = false;
+        }
+        //Close image 4
+        private void closImg4_Click(object sender, EventArgs e)
+        {
+            Img4.Image = null;
+            panImg4.Visible = true;
+            closImg4.Visible = false;
+        }
