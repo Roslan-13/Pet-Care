@@ -142,3 +142,16 @@ VisibleComponents();
                 closImg1.Visible = true;
             }
         }
+         //Open image 2
+        private void brImg2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendlg = new OpenFileDialog();
+            if (opendlg.ShowDialog() == DialogResult.OK)
+            {
+                imgLoc = opendlg.FileName.ToString();
+                Img2.ImageLocation = imgLoc;
+                panImg2.Visible = false;
+                closImg2.Visible = true;
+            }
+        }
+    
