@@ -381,3 +381,18 @@ VisibleComponents();
                     {
                         foreach (DataRow row in dt.Rows)
                         {
+                          listGall[i] = new GalleryUserControl();
+                            MemoryStream ms1 = new MemoryStream((byte[])row["Pet_Img1"]);
+                            listGall[i].Icons1 = new Bitmap(ms1);
+                            MemoryStream ms2 = new MemoryStream((byte[])row["Pet_Img2"]);
+                            listGall[i].Icons2 = new Bitmap(ms2);
+                            MemoryStream ms3 = new MemoryStream((byte[])row["Pet_Img3"]);
+                            listGall[i].Icons3 = new Bitmap(ms3);
+                            MemoryStream ms4 = new MemoryStream((byte[])row["Pet_Img4"]);
+                            listGall[i].Icons4 = new Bitmap(ms4);
+                            flowLayoutPanel2.Controls.Add(listGall[i]);
+                        }
+                    }
+                }
+            }
+        }
