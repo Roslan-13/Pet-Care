@@ -432,3 +432,19 @@ listPost[i] = new PetUserControl();
                 }
             }
         }
+          //Animal details
+        void DetailsControl_Click(object sender, EventArgs es)
+        {
+            PetUserControl obj = (PetUserControl)sender;
+            Det_Cat.Text = obj.PetType;
+            Det_Loc.Text = obj.PetLocation;
+            Det_Post.Text = obj.PetPosted;
+            Det_Cont.Text = obj.PetContact;
+            Det_Desc.Text = obj.PetDescription;
+            Det_Pic1.Image = obj.Icon2;
+            Det_Pic2.Image = obj.Icon3;
+            Det_Pic3.Image = obj.Icon4;
+            panel2.Visible = false;
+            flowLayoutPanel1.Visible = false;
+            panel4.Visible = true;
+        }
