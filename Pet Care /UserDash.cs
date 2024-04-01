@@ -316,3 +316,16 @@ VisibleComponents();
             mapType.SelectedIndex = -1;
             mapType.Visible = false;
         }
+         //Google maps button
+        private void GMapsBtn_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            flowLayoutPanel2.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            webBrowser1.Visible = true;
+            searchLoc.Visible = true;
+            searchLocBtn.Visible = true;
+            mapType.Visible = true;
+        }
