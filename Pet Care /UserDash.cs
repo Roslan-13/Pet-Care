@@ -448,3 +448,12 @@ listPost[i] = new PetUserControl();
             flowLayoutPanel1.Visible = false;
             panel4.Visible = true;
         }
+ //Search box type
+        private void searchBoxType_TextChanged(object sender, EventArgs e)
+        {
+            foreach (var item in flowLayoutPanel1.Controls)
+            {
+                var wdg = (PetUserControl)item;
+                wdg.Visible = wdg.PetType.ToLower().ToLower().Contains(searchBoxType.Text.Trim().ToLower());
+            }
+        }
