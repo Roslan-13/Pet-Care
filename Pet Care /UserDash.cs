@@ -154,8 +154,7 @@ VisibleComponents();
                 closImg2.Visible = true;
             }
         }
-    
-//Open image 3
+    //Open image 3
         private void brImg3_Click(object sender, EventArgs e)
         {
             OpenFileDialog opendlg = new OpenFileDialog();
@@ -166,4 +165,16 @@ VisibleComponents();
                 panImg3.Visible = false;
                 closImg3.Visible = true;
             }
+        }
+//Open image 4
+        private void brImg4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendlg = new OpenFileDialog();
+            if (opendlg.ShowDialog() == DialogResult.OK)
+            {
+                imgLoc = opendlg.FileName.ToString();
+                Img4.ImageLocation = imgLoc;
+                panImg4.Visible = false;
+                closImg4.Visible = true;
+                }
         }
