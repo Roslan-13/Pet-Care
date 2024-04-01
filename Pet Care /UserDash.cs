@@ -287,3 +287,32 @@ VisibleComponents();
             mapType.SelectedIndex = -1;
             mapType.Visible = false;
         }
+         //Home page button
+        private void HomePageBtn_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = true;
+            flowLayoutPanel2.Visible = false;
+            panel4.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = false;
+            webBrowser1.Visible = false;
+            searchLoc.Visible = false;
+            searchLocBtn.Visible = false;
+            mapType.SelectedIndex = -1;
+            mapType.Visible = false;
+        }
+         //Gallery buttton
+        private void GalleryBtn_Click(object sender, EventArgs e)
+        {
+            GenerateDynamicGallControl();
+            flowLayoutPanel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            flowLayoutPanel2.Visible = true;
+            panel4.Visible = false;
+            webBrowser1.Visible = false;
+            searchLoc.Visible = false;
+            searchLocBtn.Visible = false;
+            mapType.SelectedIndex = -1;
+            mapType.Visible = false;
+        }
