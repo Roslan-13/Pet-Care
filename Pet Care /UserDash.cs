@@ -457,3 +457,17 @@ listPost[i] = new PetUserControl();
                 wdg.Visible = wdg.PetType.ToLower().ToLower().Contains(searchBoxType.Text.Trim().ToLower());
             }
         }
+ //Search all type
+        private void SearchAll_Click(object sender, EventArgs e)
+        {
+            GenerateDynamicPostControl();
+        }
+        //Search dog type
+        private void SearchDogs_Click(object sender, EventArgs e)
+        {
+            foreach (var item1 in flowLayoutPanel1.Controls)
+            {
+                var wdg1 = (PetUserControl)item1;
+                wdg1.Visible = wdg1.PetCategory.ToLower().ToLower().Contains(DogsLabel.Text.Trim().ToLower());
+            }
+        }
