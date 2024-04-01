@@ -155,3 +155,15 @@ VisibleComponents();
             }
         }
     
+//Open image 3
+        private void brImg3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendlg = new OpenFileDialog();
+            if (opendlg.ShowDialog() == DialogResult.OK)
+            {
+                imgLoc = opendlg.FileName.ToString();
+                Img3.ImageLocation = imgLoc;
+                panImg3.Visible = false;
+                closImg3.Visible = true;
+            }
+        }
