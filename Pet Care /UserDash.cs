@@ -367,3 +367,17 @@ VisibleComponents();
                 throw;
             }
         }
+         //Dynamic gallery control list
+        public void GenerateDynamicGallControl()
+        {
+            flowLayoutPanel2.Controls.Clear();
+            DataTable dt = ReadGalleryTable();
+            if (dt != null)
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    GalleryUserControl[] listGall = new GalleryUserControl[dt.Rows.Count];
+                    for (int i = 0; i < 1; i++)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
