@@ -396,3 +396,17 @@ VisibleComponents();
                 }
             }
         }
+  //Dynamic post control list
+        public void GenerateDynamicPostControl()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            DataTable dt = ReadPostTable();
+            if (dt != null)
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    PetUserControl[] listPost = new PetUserControl[dt.Rows.Count];
+                    for (int i = 0; i < 1; i++)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
