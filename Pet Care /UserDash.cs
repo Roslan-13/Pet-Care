@@ -241,3 +241,35 @@ VisibleComponents();
                         cmd.Parameters.AddWithValue("@Pet_Img3", arr3.ToArray());
                         cmd.Parameters.AddWithValue("@Pet_Img4", arr4.ToArray());
                         cmd.ExecuteNonQuery();
+                         ResetData();
+                        GenerateDynamicPostControl();
+                        Con.Close();
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+         }
+                //Reset data
+                private void ResetData()
+        {
+            PetCatBox.SelectedIndex = -1;
+            PetTypeBox.SelectedIndex = -1;
+            PetLocation.Text = "";
+            PostedBox.Text = "";
+            DescBox.Text = "";
+            Img1.Image = null;
+            panImg1.Visible = true;
+            closImg1.Visible = false;
+            Img2.Image = null;
+            panImg2.Visible = true;
+            closImg2.Visible = false;
+            Img3.Image = null;
+            panImg3.Visible = true;
+            closImg3.Visible = false;
+            Img4.Image = null;
+            panImg4.Visible = true;
+            closImg4.Visible = false;
+        }
